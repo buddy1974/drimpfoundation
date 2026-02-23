@@ -167,7 +167,7 @@ h2.light {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 280px;
+  height: 210px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -181,9 +181,9 @@ h2.light {
 
 /* Logo: 1536×1024 landscape — rendered at controlled width */
 .header-logo {
-  height: 232px;
+  height: 174px;
   width: auto;
-  max-width: 480px;
+  max-width: 360px;
   object-fit: contain;
   object-position: left center;
 }
@@ -536,9 +536,9 @@ h2.light {
 }
 
 .footer-logo-img {
-  height: 192px;
+  height: 144px;
   width: auto;
-  max-width: 400px;
+  max-width: 300px;
   object-fit: contain;
   object-position: left center;
   margin-bottom: 16px;
@@ -666,12 +666,12 @@ h2.light {
   }
 
   .header-inner {
-    height: 180px;
+    height: 140px;
   }
 
   .header-logo {
-    height: 140px;
-    max-width: 280px;
+    height: 104px;
+    max-width: 220px;
   }
 
   .header-cta {
