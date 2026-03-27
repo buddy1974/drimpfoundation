@@ -220,20 +220,26 @@ h2.light {
   object-position: left center;
 }
 
-.header-cta {
-  flex-shrink: 0;
+/* ── Header Nav ──────────────────────────────────── */
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.header-nav a {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--navy);
-  border: 1.5px solid var(--navy);
-  padding: 9px 22px;
-  border-radius: 7px;
-  white-space: nowrap;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
 }
 
-.header-cta:hover {
-  background: var(--navy);
-  color: #ffffff;
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
 /* ── Hero ────────────────────────────────────────── */
@@ -462,6 +468,300 @@ a.org-child {
 a.org-child:hover {
   background: rgba(198, 162, 39, 0.1);
   border-color: var(--gold);
+}
+
+/* ── Values Grid (about page) ────────────────────── */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ── Mission / Vision Cards ──────────────────────── */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.mv-card {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+}
+
+.mv-card-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.mv-card p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+}
+
+/* ── Story Block ─────────────────────────────────── */
+.story-block {
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 40px 44px;
+}
+
+.story-block p {
+  font-size: 0.975rem;
+  color: var(--text);
+  line-height: 1.9;
+  max-width: 760px;
+}
+
+/* ── Programs Overview ───────────────────────────── */
+.prog-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.prog-overview-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 3px solid var(--gold);
+}
+
+.prog-overview-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.prog-overview-card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+/* ── What We Do List ─────────────────────────────── */
+.what-we-do {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.what-we-do li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.what-we-do li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* ── CTA Block ───────────────────────────────────── */
+.cta-block {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 40px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+
+.cta-block-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.cta-block-text p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── Ministry Pillars ────────────────────────────── */
+.pillars-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.pillar-num {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 28px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.pillar-item p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ── Events Detail Cards ─────────────────────────── */
+.events-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.event-detail-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 3px solid var(--navy);
+}
+
+.event-detail-card h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.event-detail-card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+/* ── Contact Cards ───────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-card-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Ecosystem Link Grid (contact page) ──────────── */
+.eco-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.eco-link-card {
+  display: block;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: center;
+}
+
+.eco-link-card:hover {
+  background: var(--gold-lt);
+  border-color: var(--gold);
+  color: var(--navy-dark);
 }
 
 /* ── Organigram — 3-column variant ──────────────── */
@@ -1104,7 +1404,7 @@ a.org-child:hover {
     max-width: 220px;
   }
 
-  .header-cta {
+  .header-nav {
     display: none;
   }
 
@@ -1145,15 +1445,26 @@ a.org-child:hover {
   }
 
   .prog-grid,
-  .events-grid {
+  .events-grid,
+  .events-detail-grid,
+  .prog-overview-grid {
     grid-template-columns: 1fr;
   }
 
-  .mandate-grid {
+  .mandate-grid,
+  .values-grid,
+  .mv-grid,
+  .pillars-list {
     grid-template-columns: 1fr;
   }
 
   .eco-bar-links {
     gap: 8px;
+  }
+
+  .cta-block,
+  .pillars-cta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
