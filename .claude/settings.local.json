@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(npx vercel:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
